@@ -2,7 +2,7 @@ let textoBase = document.querySelector("#areaPrincipal");
 let textoEncriptado = document.querySelector("#areaResultado");
 let btnEncriptar = document.querySelector("#encriptar");
 let btnDesencriptar = document.querySelector("#desencriptar");
-let btnCopiar = document.querySelector("copiar");
+let btnCopiar = document.querySelector("#copiar");
 
 let numeros = "0123456789";
 
@@ -40,3 +40,15 @@ btnDesencriptar.addEventListener('click', (e)=>{
     textoBase.value = "";
   }
 })
+
+btnCopiar.addEventListener("click",(e)=>{
+  e.preventDefault();
+  console.log('kfsjal')
+  let contenido = textoEncriptado.value;
+  navigator.clipboard.writeText(contenido).then(()=>{
+    alert('Texto copiado en el portapapeles');
+    textoEncriptado.value="";
+  }).catch(err => {
+    alert(`algo paso y se rompio ${err}`);
+  })
+});
