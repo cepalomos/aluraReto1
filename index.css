@@ -1,0 +1,115 @@
+body {
+  /* background-color: #76b1de; */
+  /* background-color: #e0e5ec; */
+  background-color: #DED9D5;
+  font-size: 15px;
+}
+.contenedorPrincipal {
+  height: 100vh;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "header header header aside"
+    "main main  main aside";
+}
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.imgHeader {
+  width: 20%;
+}
+h1 {
+  margin: 0 auto;
+  font-size: 3em;
+  font-weight: bold;
+  color: #353535;
+}
+aside {
+  grid-area: aside;
+}
+#areaResultado {
+  background-color: #76f5e0;
+  /* background-color: #FFF6DB; */
+  width: 80%;
+  height: 80%;
+  margin: 30px auto 0 auto;
+  border-radius: 15px;
+  padding: 10px;
+}
+main {
+  grid-area: main;
+}
+#areaPrincipal {
+    width: 75%;
+    height: 500px;
+    margin-top: 20px;
+    background-color: #76F5E0;
+    /* background-color: #DED9D5; */
+    border-radius: 10px;
+    padding: 10px;
+}
+button {
+    margin: 20px;
+}
+.btnespecial {
+    width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+.btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: #30b0ae;
+  background: linear-gradient(0deg, rgb(47, 150, 165) 0%, rgb(16, 188, 136) 100%);
+  }
+  .btn-5:hover {
+    color: #30b0ae;
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #30b0ae;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
